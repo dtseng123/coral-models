@@ -1,0 +1,29 @@
+# Models (too large for git)
+*.tflite
+*.pt
+*.onnx
+models/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker
+.docker/
+
+# Misc
+.DS_Store
+*.log
+

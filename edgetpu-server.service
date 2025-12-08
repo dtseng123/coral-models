@@ -1,0 +1,24 @@
+[Unit]
+Description=Edge TPU Inference Server (Docker)
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+ExecStartPre=-/usr/bin/docker stop edgetpu-server
+ExecStartPre=-/usr/bin/docker rm edgetpu-server
+ExecStart=/usr/bin/docker run --rm \
+    --name edgetpu-server \
+    --privileged \
+    -e PYTHONUNBUFFERED=1 \
+    -p 5590:5590 \
+    -p 5591:5591 \
+    -v /home/dash/coral-models/models:/app/models:ro \
+    edgetpu-server
+ExecStop=/usr/bin/docker stop edgetpu-server
+
+[Install]
+WantedBy=multi-user.target
+
