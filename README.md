@@ -1,6 +1,6 @@
 # Coral Edge TPU Inference Server
 
-High-performance ML inference server for **dual Coral Edge TPUs** on Raspberry Pi 5. Provides socket-based API for real-time object detection and pose estimation.
+High-performance ML inference server for **dual Coral Edge TPUs** on Raspberry Pi 5. Provides socket-based API for real-time object detection and pose estimation. 
 
 ## Performance
 
@@ -13,8 +13,9 @@ High-performance ML inference server for **dual Coral Edge TPUs** on Raspberry P
 
 ### Components
 - **Raspberry Pi 5** (8GB)
-- **Dual M.2 HAT** (Geekworm X1004 or similar)
-- **2x Coral Edge TPU M.2 A+E** (or 1x dual-TPU module)
+- **Dual M.2 HAT** (s2pi or similar)
+- **Dual Coral Edge TPU M.2 Adapter** (for dual-TPU module)
+- **Dual Coral Edge TPU M.2 A+E** 
 - **NVMe SSD** (for root filesystem)
 - **MicroSD Card** (for boot - required workaround)
 
@@ -166,10 +167,10 @@ while True:
 This inference server was built to support:
 
 ### [optidex](https://github.com/dtseng123/optidex)
-Smart home/robotics platform using computer vision for object detection and tracking.
+Portable voice controlled AI platform using computer vision for object detection and tracking. [Based on Whisplay AI Chatbot](https://github.com/PiSugar/whisplay-ai-chatbot)
 
 ### [vr-passthrough](https://github.com/dtseng123/vr-passthrough)
-VR passthrough system with real-time hand tracking and pose estimation for controller-free interaction.
+VR passthrough/ mixed reality system with real-time object detection and pose estimation for controller-free interaction.
 
 ## Architecture
 
